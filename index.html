@@ -3,30 +3,216 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>L'egogi: Expense &amp; Budget</title>
-  <meta name="description" content="Track income and spending by voice, receipts or tap. Budgets that stay honest.">
+  <title>L'egogi · Know where your money goes</title>
+  <meta name="description" content="L'egogi is a simple income and expense tracker for Android. Add entries by voice or by sharing a bank receipt, set budgets, and see where your money goes. Your records stay on your phone.">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f4f6" media="(prefers-color-scheme: light)">
+  <meta property="og:title" content="L'egogi · Know where your money goes">
+  <meta property="og:description" content="Track income and expenses by voice or by sharing a receipt. Budgets, insights and debts, with your records kept on your phone.">
+  <meta property="og:image" content="https://grittydude.github.io/legogi-site/assets/icon.png">
   <link rel="icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/landing.css">
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="wordmark" href="./" aria-label="L'egogi home">
+        <img class="on-light" src="assets/wordmark-light-bg.png" alt="L'egogi">
+        <img class="on-dark" src="assets/wordmark-dark-bg.png" alt="L'egogi">
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a class="hide-sm" href="#features">Features</a>
+        <a class="hide-sm" href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a class="btn small" href="#get">Get L'egogi</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <span class="wordmark">
-      <img class="on-light" src="assets/wordmark-light-bg.png" alt="L'egogi">
-      <img class="on-dark" src="assets/wordmark-dark-bg.png" alt="L'egogi">
-    </span>
-    <h1>Know where your money goes.</h1>
-    <p class="muted">L'egogi is a simple income and expense tracker for Android. Add entries by voice, by sharing a bank receipt, or with a tap. Your records stay on your phone.</p>
+    <section class="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Coming soon to Google Play</span>
+          <h1>Know where your money <span class="accent">goes.</span></h1>
+          <p class="lead">L'egogi tracks your income and spending without the busywork. Say it, or share a bank receipt, and it's logged.</p>
+          <div class="ctas">
+            <a class="btn" href="#get">Get early access</a>
+            <a class="btn ghost" href="#features">See what it does</a>
+          </div>
+          <p class="note">Free to use. No sign-up needed. Your records stay on your phone.</p>
+        </div>
 
-    <a class="card" href="privacy/">
-      <strong>Privacy policy</strong>
-      <span class="muted">What the app stores, and where</span>
-    </a>
-    <a class="card" href="mailto:ikechukwu.a.achom@gmail.com">
-      <strong>Contact</strong>
-      <span class="muted">ikechukwu.a.achom@gmail.com</span>
-    </a>
+        <div class="phone" role="img" aria-label="The L'egogi app showing this month's spending, a breakdown by category and recent entries">
+          <div class="screen" aria-hidden="true">
+            <div class="s-top">
+              <div class="s-avatar">A</div>
+              <div class="s-search">Search entries</div>
+            </div>
+            <div class="s-hero">
+              <div class="label">Welcome back, <span class="name">Ada</span></div>
+              <div class="amount">₦184,250</div>
+              <div class="sub"><span>Spent this month</span><span class="down">↓ 12%</span></div>
+            </div>
+            <div class="s-row">
+              <div class="s-card">
+                <b>Budget</b><span>₦65,750 left</span>
+                <div class="bars"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="s-card">
+                <b>Categories</b><span>Food leads</span>
+                <div class="tiles">
+                  <i style="background:#14b8c4"></i><i style="background:#f2615a"></i><i style="background:#2d8cf0"></i><i style="background:#ffc83d"></i>
+                </div>
+              </div>
+            </div>
+            <div class="s-list">
+              <div class="s-item">
+                <div class="s-ico" style="background:#14b8c4"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4"><path d="M4 11h16M6 11V7a6 6 0 0 1 12 0v4M5 11l1.5 9h11L19 11"/></svg></div>
+                <div class="t">Groceries<small>Shoprite · today</small></div>
+                <div class="v">−₦12,400</div>
+              </div>
+              <div class="s-item">
+                <div class="s-ico" style="background:#2d8cf0"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4"><path d="M5 17h14M7 17l1-6h8l1 6M9 11V7h6v4"/></svg></div>
+                <div class="t">Transport<small>Bolt · today</small></div>
+                <div class="v">−₦3,200</div>
+              </div>
+              <div class="s-item">
+                <div class="s-ico" style="background:#34c77b"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+                <div class="t">Salary<small>Income · 1 Oct</small></div>
+                <div class="v">+₦350,000</div>
+              </div>
+            </div>
+            <div class="s-toast">
+              <span class="pill">NEW</span>
+              <span>Receipt read: ₦25,000 to Chidi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>© 2026 Ikechukwu Achom</footer>
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Features</span>
+          <h2>Everything you need. Nothing you don't.</h2>
+          <p>No bank logins, no wallets, no linked accounts. Just your income and expenses, kept honest.</p>
+        </div>
+        <div class="grid">
+          <article class="feature reveal">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+            <h3>Add by voice</h3>
+            <p>Say "spent four thousand on lunch" and L'egogi drafts the entry for you to check and save.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3h10v18l-2.5-1.5L12 21l-2.5-1.5L7 21z"/><path d="M10 8h4M10 12h4"/></svg></div>
+            <h3>Share a receipt</h3>
+            <p>Share a bank transfer receipt from your banking app. The amount, payee and date are read on your phone.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 4"/></svg></div>
+            <h3>Budgets</h3>
+            <p>Set a monthly limit overall or for each category, and see how much is left at a glance.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>Clear insights</h3>
+            <p>See where your money went this month, which categories lead, and who you pay most.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 3l4 4-4 4M21 7H9M7 21l-4-4 4-4M3 17h12"/></svg></div>
+            <h3>Debts and loans</h3>
+            <p>Track money you lent or borrowed, record repayments, and see what's still owed.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Totals you can trust</h3>
+            <p>Transfer fees are logged for you, money moved to savings doesn't count as spending, and you can export a CSV any time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">How it works</span>
+          <h2>From bank receipt to logged, in seconds.</h2>
+          <p>No typing amounts off a screenshot.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Share</h3>
+            <p>After a transfer, tap Share on the receipt in your banking app and pick L'egogi.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Read on your phone</h3>
+            <p>L'egogi reads the amount, the person you paid and the date. The image never leaves your phone.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Saved</h3>
+            <p>Check the details, pick a category, and save. The transfer fee can be added for you.</p>
+            <div class="quote">₦25,000 to Chidi Okafor · Transfer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="wrap">
+        <div class="privacy-band reveal">
+          <div>
+            <span class="kicker">Privacy</span>
+            <h2>Your money is your business.</h2>
+            <p>L'egogi keeps your financial records in the app's private storage on your phone. We don't run servers that receive them, and we don't sell or share them.</p>
+            <a class="btn ghost" href="privacy/">Read the privacy policy</a>
+          </div>
+          <ul class="checks">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span>No account or sign-up needed.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span>No bank logins. L'egogi never connects to your bank.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span>Receipts are read on your phone, not uploaded.</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span>No ads and no analytics.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="soon">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Coming to Pro</span>
+          <h2>More on the way.</h2>
+          <p>These aren't in the app yet. They're what we're building next.</p>
+        </div>
+        <div class="soon reveal">
+          <span class="chip">AI money insights</span>
+          <span class="chip">Optional backup and sync</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="get" class="final">
+      <div class="wrap reveal">
+        <img src="assets/monogram.png" alt="" width="88" height="88">
+        <h2>Coming soon to Google Play.</h2>
+        <p>L'egogi is in testing now. Want to try it early? Send us a note.</p>
+        <a class="btn" href="mailto:ikechukwu.a.achom@gmail.com?subject=L'egogi%20early%20access">Ask for early access</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Ikechukwu Achom</span>
+      <nav aria-label="Footer">
+        <a href="privacy/">Privacy policy</a>
+        <a href="mailto:ikechukwu.a.achom@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

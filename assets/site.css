@@ -1,10 +1,21 @@
+/* L'egogi site: brand tokens, light and dark. Outfit is self-hosted (SIL OFL),
+   so the site makes no third-party font requests. */
+@font-face { font-family: Outfit; src: url(fonts/Outfit-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: Outfit; src: url(fonts/Outfit-Medium.ttf) format("truetype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: Outfit; src: url(fonts/Outfit-SemiBold.ttf) format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: Outfit; src: url(fonts/Outfit-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
+
 :root {
   --bg: #f4f4f6;
   --surface: #ffffff;
+  --surface-2: #ececf0;
   --text: #111111;
-  --muted: #63636b;
+  --muted: #5d5d66;
   --line: #e2e2e7;
   --brand: #ff9523;
+  --brand-ink: #b85a00;
+  --green: #15803d;
+  --coral: #c8352e;
   color-scheme: light dark;
 }
 
@@ -12,60 +23,52 @@
   :root {
     --bg: #000000;
     --surface: #1c1c1e;
+    --surface-2: #2a2a2d;
     --text: #ffffff;
     --muted: #8e8e93;
     --line: #2e2e31;
+    --brand-ink: #ff9523;
+    --green: #34c77b;
+    --coral: #f2615a;
   }
 }
 
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 17px/1.6 Outfit, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 40px 20px 64px;
-}
+a { color: inherit; text-decoration-color: var(--brand); text-underline-offset: 3px; }
+img { max-width: 100%; }
+.muted { color: var(--muted); }
 
-.wordmark { height: 26px; display: block; margin-bottom: 40px; }
+/* Wordmark: dark letters on light, white letters on dark. */
+.wordmark { display: inline-flex; height: 24px; }
+.wordmark img { height: 24px; width: auto; }
 .wordmark .on-dark { display: none; }
 @media (prefers-color-scheme: dark) {
   .wordmark .on-light { display: none; }
   .wordmark .on-dark { display: inline; }
 }
-.wordmark img { height: 26px; }
 
-h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
-h2 { font-size: 1.15rem; margin: 32px 0 8px; }
-p, li { color: var(--text); }
-.muted { color: var(--muted); }
+/* ---------- Privacy policy page ---------- */
 
+main.doc { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+main.doc .wordmark { margin-bottom: 40px; }
+main.doc h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 8px; }
+main.doc h2 { font-size: 1.2rem; margin: 32px 0 8px; }
 .summary {
   background: var(--surface);
   border: 1px solid var(--line);
   border-left: 4px solid var(--brand);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 16px 20px;
   margin: 24px 0;
 }
-
-a { color: inherit; text-decoration-color: var(--brand); text-underline-offset: 3px; }
-
-.card {
-  display: block;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 18px 20px;
-  margin-top: 12px;
-  text-decoration: none;
-}
-.card strong { display: block; }
-
-footer { margin-top: 48px; font-size: 0.9rem; color: var(--muted); }
+main.doc footer, .site-footer { margin-top: 48px; font-size: 0.9rem; color: var(--muted); }
